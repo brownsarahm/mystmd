@@ -100,6 +100,7 @@ export async function runWordExport(
     preFrontmatters: [
       filterKeys(article, [...PAGE_FRONTMATTER_KEYS, ...Object.keys(FRONTMATTER_ALIASES)]),
     ],
+    execute: opts?.execute,
   });
   const mystTemplate = new MystTemplate(session, {
     kind: TemplateKind.docx,

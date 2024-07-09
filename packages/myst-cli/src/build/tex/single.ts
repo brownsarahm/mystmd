@@ -141,6 +141,7 @@ export async function localArticleToTexRaw(
       preFrontmatters: fileArticles.map((article) =>
         filterKeys(article, [...PAGE_FRONTMATTER_KEYS, ...Object.keys(FRONTMATTER_ALIASES)]),
       ),
+      execute: opts?.execute,
     },
   );
 
@@ -206,6 +207,7 @@ export async function localArticleToTexTemplated(
       preFrontmatters: fileArticles.map((article) =>
         filterKeys(article, [...PAGE_FRONTMATTER_KEYS, ...Object.keys(FRONTMATTER_ALIASES)]),
       ),
+      execute: opts?.execute,
     },
   );
   const bibtexWritten = writeBibtexFromCitationRenderers(

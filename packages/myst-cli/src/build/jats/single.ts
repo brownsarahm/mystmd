@@ -41,6 +41,7 @@ export async function runJatsExport(
       preFrontmatters: [
         filterKeys(article, [...PAGE_FRONTMATTER_KEYS, ...Object.keys(FRONTMATTER_ALIASES)]),
       ], // only apply to article, not sub_articles
+      execute: opts?.execute,
     })
   ).map((content) => {
     const { kind, file, mdast, frontmatter, slug } = content;

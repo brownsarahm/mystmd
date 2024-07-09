@@ -32,6 +32,7 @@ export async function runMdExport(
     preFrontmatters: [
       filterKeys(article, [...PAGE_FRONTMATTER_KEYS, ...Object.keys(FRONTMATTER_ALIASES)]),
     ],
+    execute: opts?.execute,
   });
   await finalizeMdast(session, mdast, frontmatter, article.file, {
     imageWriteFolder: path.join(path.dirname(output), 'files'),
