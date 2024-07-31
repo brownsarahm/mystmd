@@ -1,5 +1,18 @@
 # myst-cli
 
+## 1.3.2
+
+### Patch Changes
+
+- ee0378e3: Change pattern expansion to a flat list of files
+- 999d34a1: Fix execution for non-site builds
+- 3fd53be8: Add better validation and post-processing to JSON files
+- Updated dependencies [3fd53be8]
+  - myst-common@1.5.2
+  - myst-config@1.5.2
+  - myst-frontmatter@1.5.2
+  - myst-spec-ext@1.5.2
+
 ## 1.3.1
 
 ### Patch Changes

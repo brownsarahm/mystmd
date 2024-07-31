@@ -1,5 +1,12 @@
 # myst-common
 
+## 1.5.2
+
+### Patch Changes
+
+- 3fd53be8: Add better validation and post-processing to JSON files
+  - myst-frontmatter@1.5.2
+
 ## 1.5.1
 
 ### Patch Changes
