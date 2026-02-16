@@ -52,10 +52,10 @@ jobs:
       url: \${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Setup Pages
-        uses: actions/configure-pages@v3
-      - uses: actions/setup-node@v4
+        uses: actions/configure-pages@v5
+      - uses: actions/setup-node@v6
         with:
           node-version: 18.x
       - name: Install ${readableName()}
@@ -63,7 +63,7 @@ jobs:
       - name: Build HTML Assets
         run: ${npmBinaryName()} build --html
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: './_build/html'
       - name: Deploy to GitHub Pages
